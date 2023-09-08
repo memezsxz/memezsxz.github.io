@@ -1,0 +1,98 @@
+body {
+    --bg-color: #031f3e;
+
+    background: var(--bg-color);
+    text-align: center;
+
+
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #fdf2c3;
+    margin: 4%;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.btn_s {
+    display: inline-grid;
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    /*grid-auto-rows: minmax(100px, auto);*/
+
+    margin-top: 1.5%;
+
+    .btn {
+        width: 125px;
+        height: 125px;
+        border: black 0.4rem solid;
+        border-radius: 20%;
+
+    }
+
+    #green {
+        background: green;
+    }
+
+    #red {
+        background: red;
+    }
+
+    #yellow {
+        background: yellow;
+    }
+
+    #blue {
+        background: blue;
+    }
+}
+
+.game-over {
+    background-color: red;
+    animation: gameOverBlink 2s ease-in-out infinite;
+
+}
+
+@keyframes gameOverBlink {
+    0% {
+        background-color: var(--bg-color);
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: var(--bg-color);
+    }
+}
+
+.game-over {
+    background-color: #061c39;
+    animation: newGameBlink 2s infinite;
+}
+
+@keyframes newGameBlink {
+    0% {
+        background-color: var(--bg-color);
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: var(--bg-color);
+    }
+}
+
+.player-click {
+    opacity: 0.5;
+}
+
+.next-btn {
+    /*box-shadow: 2px 4px 16px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7);*/
+    box-shadow: 0 0 20px white;
+    background-color: gray;
+}
